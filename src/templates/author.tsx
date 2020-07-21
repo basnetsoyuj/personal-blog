@@ -50,7 +50,7 @@ interface AuthorTemplateProps {
       id: string;
       website?: string;
       twitter?: string;
-      facebook?: string;
+      github?: string;
       location?: string;
       profile_image?: {
         childImageSharp: {
@@ -173,14 +173,14 @@ const Author: React.FC<AuthorTemplateProps> = props => {
                         </AuthorSocialLinkAnchor>
                       </AuthorSocialLink>
                     )}
-                    {author.facebook && (
+                    {author.github && (
                       <AuthorSocialLink className="author-social-link">
                         <AuthorSocialLinkAnchor
-                          href={`https://www.facebook.com/${author.facebook}`}
+                          href={`https://www.github.com/${author.github}`}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          Facebook
+                          GitHub
                         </AuthorSocialLinkAnchor>
                       </AuthorSocialLink>
                     )}
@@ -212,7 +212,7 @@ export const pageQuery = graphql`
       website
       twitter
       bio
-      facebook
+      github
       location
       profile_image {
         childImageSharp {

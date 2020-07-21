@@ -95,7 +95,7 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
                 <Link to="/about">About</Link>
               </li>
               <li role="menuitem">
-                <Link to="/tags/getting-started/">Getting Started</Link>
+                <a href={config.portfolioUrl} target="_blank">Website</a>
               </li>
             </ul>
             {isPost && (
@@ -113,7 +113,7 @@ class SiteNav extends React.Component<SiteNavProps, SiteNavState> {
                 css={[SocialLink, SocialLinkFb]}
                 href={config.facebook}
                 target="_blank"
-                title="Facebook"
+                title="GitHub"
                 rel="noopener noreferrer"
               >
                 <Facebook />
