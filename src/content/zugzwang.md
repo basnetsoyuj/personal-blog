@@ -3,9 +3,10 @@ layout: post
 title: 'Zugzwang: An Enforced Elegance'
 image: img/chess.png
 author: [Soyuj Jung Basnet]
-date: 2019-03-10T10:00:00.000Z
+date: 2019-06-18T10:00:00.000Z
 tags:
   - chess
+  - board game
 excerpt: Introducing specific constraints on variables and functions in mathematics gives rise to numerous intricate patterns. This blog discusses one such delicacy that can arise in certain board games like chess — Zugzwang.
 ---
 

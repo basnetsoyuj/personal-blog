@@ -4,8 +4,8 @@ const path = require('path');
 module.exports = {
   siteMetadata: {
     title: 'SJB Blogs',
-    description: 'A personal blogging website for Soyuj Jung Basnet',
-    siteUrl: 'https://blog.basnetsoyuj.com.np', // full path to blog - no ending slash
+    description: 'A personal blogging website for Soyuj Jung Basnet to put down his thoughts, musings and experiences.',
+    siteUrl: 'https://blogs.basnetsoyuj.com.np', // full path to blog - no ending slash
   },
   mapping: {
     'MarkdownRemark.frontmatter.author': 'AuthorYaml',
@@ -54,7 +54,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: 'https://gatsby-casper.netlify.com',
+        siteUrl: 'https://blogs.basnetsoyuj.com.np/',
       },
     },
     'gatsby-plugin-emotion',
@@ -72,7 +72,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: 'UA-XXXX-Y',
+        trackingId: 'UA-173253254-1',
         // Puts tracking script in the head instead of the body
         head: true,
         // IP anonymization for GDPR compliance
