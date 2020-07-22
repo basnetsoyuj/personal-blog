@@ -4,7 +4,7 @@
 
 A collection of my thoughts, musings, and experiences.
 
-[https://blogs.basnetsoyuj.com.np/](https://blogs.basnetsoyuj.com.np/)
+[https://blog.basnetsoyuj.com.np/](https://blog.basnetsoyuj.com.np/)
 
 Soyuj Jung Basnet's blogging website is powered by Gatsby, React, Node.js and Netlify.
 

@@ -5,7 +5,7 @@ module.exports = {
   siteMetadata: {
     title: 'SJB Blogs',
     description: 'A personal blogging website for Soyuj Jung Basnet to put down his thoughts, musings and experiences.',
-    siteUrl: 'https://blogs.basnetsoyuj.com.np', // full path to blog - no ending slash
+    siteUrl: 'https://blog.basnetsoyuj.com.np', // full path to blog - no ending slash
   },
   mapping: {
     'MarkdownRemark.frontmatter.author': 'AuthorYaml',
@@ -73,7 +73,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: 'https://blogs.basnetsoyuj.com.np/',
+        siteUrl: 'https://blog.basnetsoyuj.com.np/',
       },
     },
     'gatsby-plugin-emotion',
