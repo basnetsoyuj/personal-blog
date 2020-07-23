@@ -55,7 +55,7 @@ const config: WebsiteConfig = {
   coverImage: 'img/blog-cover.png',
   logo: 'img/logo.png',
   lang: 'en',
-  siteUrl: 'https://blog.basnetsoyuj.com.np/',
+  siteUrl: 'https://blog.basnetsoyuj.com.np',
   facebook: 'https://github.com/basnetsoyuj',
   twitter: 'https://twitter.com/basnetsoyuj',
   showSubscribe: false,
