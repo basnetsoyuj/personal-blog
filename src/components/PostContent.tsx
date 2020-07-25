@@ -34,7 +34,7 @@ export const PostFullContent = styled.section`
   margin: 0 auto;
   padding: 0 170px 6vw;
   min-height: 230px;
-  font-family: Georgia, serif;
+  font-family: Euclid, serif;
   font-size: 2rem;
   line-height: 1.6em;
   background: #fff;
@@ -338,8 +338,8 @@ export const PostFullContent = styled.section`
     padding: 0.4em 1em 0.9em;
     border: 0;
     /* color: var(--blue); */
-    color: ${colors.blue};
-    font-family: Georgia, serif;
+    color: ${colors.midgrey};
+    font-family: Euclid, serif;
     font-size: 3.2rem;
     line-height: 1.35em;
     text-align: center;

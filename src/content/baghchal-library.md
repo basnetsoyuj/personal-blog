@@ -16,11 +16,11 @@ baghchal runs on python 3 . You can now install it directly from PyPI via pip:
 ```shell
 pip install baghchal
 ```
-System requirements are [numpy](https://pypi.org/project/numpy/) and [Pillow](https://pypi.org/project/Pillow/).
+System requirements are <a href="https://pypi.org/project/numpy" target="_blank">numpy</a> and <a href="https://pypi.org/project/Pillow/" target="_blank">Pillow</a>.
 
 ---
 ### Source Code
-The source code can be found in the [GitHub baghchal Repository](https://github.com/basnetsoyuj/baghchal).
+The source code can be found in the <a href="https://github.com/basnetsoyuj/baghchal" target="_blank">GitHub baghchal Repository</a>.
 
 ### Documentation
 The baghchal package has 3 sub-modules:
@@ -39,4 +39,4 @@ Since a proper documentation is not available as of yet, you have to directly re
 If you want to contribute to the library and modify various aspects of the code to make it better, your help is very welcome. You can directly open a pull request at: <a href="https://github.com/basnetsoyuj/baghchal/pulls" target="_blank">baghchal Pull Requests</a>
 
 ### License
-baghchal is licensed under [MIT License](https://github.com/basnetsoyuj/baghchal/blob/master/LICENSE.txt).
+baghchal is licensed under <a href="https://github.com/basnetsoyuj/baghchal/blob/master/LICENSE.txt" target="_blank">MIT License</a>.
