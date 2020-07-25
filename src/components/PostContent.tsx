@@ -200,11 +200,11 @@ export const PostFullContent = styled.section`
     /* border: color(var(--darkgrey) l(-10%)) 1px solid; */
     /* border: ${lighten('-0.1', colors.darkgrey)} 1px solid; */
     /* color: var(--whitegrey); */
-    color: ${colors.whitegrey};
+    color: ${colors.lightblack};
     font-size: 1.4rem;
     line-height: 1.5em;
     /* background: color(var(--darkgrey) l(-3%)); */
-    /* background: ${lighten('-0.03', colors.darkgrey)}; */
+    background: ${lighten('-0.03', colors.darkgrey)};
     border-radius: 5px;
   }
 
@@ -512,7 +512,9 @@ export const PostFullContent = styled.section`
       box-shadow: 0 0 1px rgba(255, 255, 255, 0.9);
     }
   }
-
+  pre{
+    color: ${colors.midgrey};
+  }
   /* Start Syntax Highlighting */
   /* Taken from overreacted https://github.com/gaearon/overreacted.io/blob/942b41555f5e5ccbb5f93f6c26142cd90b314236/src/utils/global.css#L68 */
   code[class*='language-'],
@@ -665,6 +667,14 @@ export const PostFullContent = styled.section`
   .gatsby-highlight pre[class*='language-'] {
     float: left;
     min-width: 100%;
+  }
+
+  figcaption{
+    text-align:center;
+    text-decoration:underline;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+    margin-bottom: 1.5em;
+    font-size:0.9em;
   }
   /* End Syntax Highlighting */
 `;
