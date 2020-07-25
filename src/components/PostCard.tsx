@@ -59,18 +59,7 @@ export const PostCard: React.FC<PostCardProps> = ({ post, large = false }) => {
           </PostCardExcerpt>
         </Link>
         <PostCardMeta className="post-card-meta">
-          <AuthorList authors={post.frontmatter.author} tooltip="small" />
           <PostCardBylineContent className="post-card-byline-content">
-            <span>
-              {post.frontmatter.author.map((author, index) => {
-                return (
-                  <React.Fragment key={author.id}>
-                    <Link to={`/author/${_.kebabCase(author.id)}/`}>{author.id}</Link>
-                    {post.frontmatter.author.length - 1 > index && ', '}
-                  </React.Fragment>
-                );
-              })}
-            </span>
             <span className="post-card-byline-date">
               <time dateTime={datetime}>{displayDatetime}</time>{' '}
               <span className="bull">&bull;</span> {post.timeToRead} min read
@@ -204,8 +193,7 @@ const PostCardTitle = styled.h2`
 `;
 
 const PostCardExcerpt = styled.section`
-  font-family: Georgia, serif;
-
+  font-family: Euclid, serif;
   @media (prefers-color-scheme: dark) {
     /* color: color(var(--midgrey) l(+10%)); */
     color: ${lighten('0.1', colors.midgrey)} !important;
@@ -222,10 +210,10 @@ const PostCardBylineContent = styled.div`
   flex: 1 1 50%;
   display: flex;
   flex-direction: column;
-  margin: 4px 0 0 10px;
+  /* margin: 4px 0 0 10px; */
   /* color: color(var(--midgrey) l(+10%)); */
-  color: ${lighten('0.1', colors.midgrey)};
-  font-size: 1.2rem;
+  color: ${lighten('0.1', '#333333')};
+  font-size: 1.45rem;
   line-height: 1.4em;
   font-weight: 400;
   letter-spacing: 0.2px;
@@ -242,6 +230,7 @@ const PostCardBylineContent = styled.div`
   }
 
   @media (prefers-color-scheme: dark) {
+    color: ${lighten('0.1', '#90a2aa')};
     a {
       color: rgba(255, 255, 255, 0.75);
     }

@@ -32,7 +32,7 @@ export const Footer: React.FC = () => {
               Twitter
             </a>
           )}
-
+          <Link to="/contact">Contact</Link>
           <a href="/rss.xml">RSS</a>
         </SiteFooterNav>
       </div>

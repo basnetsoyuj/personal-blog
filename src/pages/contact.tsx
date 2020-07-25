@@ -37,7 +37,7 @@ const PageTemplate = css`
 const About: React.FC = () => (
   <IndexLayout>
     <Helmet>
-      <title>About | SJB Blogs</title>
+      <title>Contact | SJB Blogs</title>
     </Helmet>
     <Wrapper css={PageTemplate}>
       <header className="site-archive-header no-image" css={[SiteHeader, SiteArchiveHeader]}>
@@ -51,18 +51,17 @@ const About: React.FC = () => (
         <div css={inner}>
           <article className="post page" css={[PostFull, NoImage]}>
             <PostFullHeader className="post-full-header">
-              <PostFullTitle className="post-full-title">About</PostFullTitle>
+              <PostFullTitle className="post-full-title">Contact</PostFullTitle>
             </PostFullHeader>
 
             <PostFullContent className="post-full-content">
               <div className="post-content">
-                <h5>
-                  A Personal Blogging Site
-                </h5>
+                <h5>Questions / Feedback</h5>
                 <p>
-                Hey! I'm Soyuj Jung Basnet. I'm fascinated by Mathematics, Computer Science, and Physics. I want to explore how and why things work the way they do. This website was created to help me do exactly that. By penning down my thoughts, experiences, and point of view on various technical and non-technical areas, I wish to understand things better, explain them clearly, and ultimately be a better problem solver.
+                  If you are interested in my work, have a question, or want to leave a feedback, please feel free to contact me via <a href="mailto:bsoyuj@gmail.com">mail</a>. I am also available on <a href="https://twitter.com/basnetsoyuj" target="_blank">Twitter</a>.
                 </p>
-                <p>Enjoy my blogs!</p>
+                <h5>Report Issues</h5>
+                <p>If you want to report typos, grammatical errors, or any other types of inaccuracies in the blog, please open an issue <a href="https://github.com/basnetsoyuj/personal-blog/issues/new" target="_blank">here</a>.</p>
               </div>
             </PostFullContent>
           </article>

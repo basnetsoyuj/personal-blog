@@ -445,6 +445,7 @@ export const PostFullContent = styled.section`
     h2,
     h3,
     h4,
+    h5,
     h6 {
       color: rgba(255, 255, 255, 0.9);
     }
