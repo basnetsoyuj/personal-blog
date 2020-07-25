@@ -34,7 +34,7 @@ export const PostFullContent = styled.section`
   margin: 0 auto;
   padding: 0 170px 6vw;
   min-height: 230px;
-  font-family: Euclid, serif;
+  font-family: Euclid, 'Century Gothic';
   font-size: 2rem;
   line-height: 1.6em;
   background: #fff;
@@ -339,7 +339,7 @@ export const PostFullContent = styled.section`
     border: 0;
     /* color: var(--blue); */
     color: ${colors.midgrey};
-    font-family: Euclid, serif;
+    font-family: Euclid, 'Century Gothic';
     font-size: 3.2rem;
     line-height: 1.35em;
     text-align: center;

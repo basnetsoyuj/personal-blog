@@ -193,7 +193,7 @@ const PostCardTitle = styled.h2`
 `;
 
 const PostCardExcerpt = styled.section`
-  font-family: Euclid, serif;
+  font-family: Euclid, 'Century Gothic';
   @media (prefers-color-scheme: dark) {
     /* color: color(var(--midgrey) l(+10%)); */
     color: ${lighten('0.1', colors.midgrey)} !important;
