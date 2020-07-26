@@ -51,7 +51,7 @@ export interface IndexProps {
 }
 
 const IndexPage: React.FC<IndexProps> = props => {
-  const { width, height } = props.data.header.childImageSharp.fixed;
+  const { width, height } = props.data.logo.childImageSharp.fixed;
 
   return (
     <IndexLayout css={HomePosts}>
@@ -66,7 +66,7 @@ const IndexPage: React.FC<IndexProps> = props => {
         <meta property="og:url" content={config.siteUrl} />
         <meta
           property="og:image"
-          content={`${config.siteUrl}${props.data.header.childImageSharp.fixed.src}`}
+          content={`${config.siteUrl}${props.data.logo.childImageSharp.fixed.src}`}
         />
         {config.facebook && <meta property="article:publisher" content={config.facebook} />}
         {config.googleSiteVerification && (
@@ -78,7 +78,7 @@ const IndexPage: React.FC<IndexProps> = props => {
         <meta name="twitter:url" content={config.siteUrl} />
         <meta
           name="twitter:image"
-          content={`${config.siteUrl}${props.data.header.childImageSharp.fixed.src}`}
+          content={`${config.siteUrl}${props.data.logo.childImageSharp.fixed.src}`}
         />
         {config.twitter && (
           <meta
