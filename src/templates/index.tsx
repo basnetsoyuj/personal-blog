@@ -37,6 +37,11 @@ export interface IndexProps {
         fixed: FixedObject;
       };
     };
+    ogImage: {
+      childImageSharp: {
+        fixed: FixedObject;
+      };
+    };
     header: {
       childImageSharp: {
         fixed: FixedObject;
@@ -51,7 +56,7 @@ export interface IndexProps {
 }
 
 const IndexPage: React.FC<IndexProps> = props => {
-  const { width, height } = props.data.logo.childImageSharp.fixed;
+  const { width, height } = props.data.ogImage.childImageSharp.fixed;
 
   return (
     <IndexLayout css={HomePosts}>
@@ -66,7 +71,7 @@ const IndexPage: React.FC<IndexProps> = props => {
         <meta property="og:url" content={config.siteUrl} />
         <meta
           property="og:image"
-          content={`${config.siteUrl}${props.data.logo.childImageSharp.fixed.src}`}
+          content={`${config.siteUrl}${props.data.ogImage.childImageSharp.fixed.src}`}
         />
         {config.facebook && <meta property="article:publisher" content={config.facebook} />}
         {config.googleSiteVerification && (
@@ -78,7 +83,7 @@ const IndexPage: React.FC<IndexProps> = props => {
         <meta name="twitter:url" content={config.siteUrl} />
         <meta
           name="twitter:image"
-          content={`${config.siteUrl}${props.data.logo.childImageSharp.fixed.src}`}
+          content={`${config.siteUrl}${props.data.ogImage.childImageSharp.fixed.src}`}
         />
         {config.twitter && (
           <meta
@@ -155,6 +160,15 @@ export const pageQuery = graphql`
       }
     }
     header: file(relativePath: { eq: "img/blog-cover.png" }) {
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.
+        fixed(width: 2000, quality: 100) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    ogImage: file(relativePath: { eq: "img/og-image.png" }) {
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.
