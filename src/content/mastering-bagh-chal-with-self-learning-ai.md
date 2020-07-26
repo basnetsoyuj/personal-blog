@@ -2,7 +2,7 @@
 layout: post
 title: 'Mastering the Nepali Board Game of Bagh Chal with self-learning AI'
 author: [Soyuj Jung Basnet]
-tags: ['reinforcement learning', 'artificial intelligence', 'engineering']
+tags: ['reinforcement learning', 'AI', 'engineering']
 image: img/robot.png
 date: '2020-07-24T11:46:37.121Z'
 draft: false

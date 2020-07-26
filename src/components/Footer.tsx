@@ -13,11 +13,11 @@ export const Footer: React.FC = () => {
     <footer css={[outer, SiteFooter]}>
       <div css={[inner, SiteFooterContent]}>
         <section className="copyright">
-          <Link to="/">{config.title}</Link> &copy; {new Date().getFullYear()}{' '}
+          <Link to="/">SJB Blogs</Link> &copy; {new Date().getFullYear()}{' '}
           {config.footer && (
-            <Link to="/">
+            <a href={config.portfolioUrl} target="_blank">
               | {config.footer}
-            </Link>
+            </a>
           )}
         </section>
         <SiteFooterNav>

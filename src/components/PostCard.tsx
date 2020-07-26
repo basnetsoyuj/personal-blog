@@ -10,7 +10,6 @@ import styled from '@emotion/styled';
 
 import { colors } from '../styles/colors';
 import { PageContext } from '../templates/post';
-import { AuthorList } from './AuthorList';
 
 export interface PostCardProps {
   post: PageContext;

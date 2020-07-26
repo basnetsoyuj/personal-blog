@@ -188,11 +188,13 @@ const PageTemplate: React.FC<PageTemplateProps> = props => {
             <article css={[PostFull, !post.frontmatter.image && NoImage]}>
               <PostFullHeader className="post-full-header">
                 <PostFullTags className="post-full-tags">
-                  {post.frontmatter.tags && post.frontmatter.tags.length > 0 && (
-                    <Link to={`/tags/${_.kebabCase(post.frontmatter.tags[0])}/`}>
-                      {post.frontmatter.tags[0]}
-                    </Link>
-                  )}
+                  {post.frontmatter.tags && post.frontmatter.tags.length > 0 && post.frontmatter.tags.map((node) => (
+                    <div>
+                      <Link to={`/tags/${_.kebabCase(node)}/`} className="inline-tag">{node}</Link>
+                      {post.frontmatter.tags.lastIndexOf(node)!==post.frontmatter.tags.length-1 && 
+                      <span className="bull">&bull;</span>}
+                    </div>
+                  ))}
                 </PostFullTags>
                 <PostFullTitle className="post-full-title">{post.frontmatter.title}</PostFullTitle>
                 <PostFullCustomExcerpt className="post-full-custom-excerpt">
@@ -314,6 +316,11 @@ const PostFullTags = styled.section`
   line-height: 1.4em;
   font-weight: 600;
   text-transform: uppercase;
+
+  a{
+    padding: 0 5px;
+  }
+
 `;
 
 const PostFullCustomExcerpt = styled.p`

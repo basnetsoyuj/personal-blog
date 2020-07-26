@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: 'SJB Blogs',
+    title: 'Soyuj Jung Basnet Blogs',
     description: 'A personal blogging website for Soyuj Jung Basnet to put down his thoughts, musings and experiences.',
     siteUrl: 'https://blog.basnetsoyuj.com.np', // full path to blog - no ending slash
   },

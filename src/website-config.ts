@@ -50,7 +50,7 @@ export interface WebsiteConfig {
 }
 
 const config: WebsiteConfig = {
-  title: 'SJB Blogs',
+  title: 'Soyuj Jung Basnet Blogs',
   description: 'A collection of my thoughts, musings, and experiences.',
   coverImage: 'img/blog-cover.png',
   logo: 'img/logo.png',
