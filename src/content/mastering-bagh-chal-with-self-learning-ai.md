@@ -2,9 +2,10 @@
 layout: post
 title: 'Mastering the Nepali Board Game of Bagh Chal with self-learning AI'
 author: [Soyuj Jung Basnet]
-tags: ['Reinforcement Learning', 'Artificial Intelligence', 'Engineering']
+tags: ['reinforcement learning', 'artificial intelligence', 'engineering']
 image: img/robot.png
 date: '2020-07-24T11:46:37.121Z'
+draft: false
 excerpt: Inspired by AlphaZero, this deep reinforcement learning AI agent uses a deep policy and value neural network along with Monte Carlo Tree Search to self-learn the traditional Nepali game of Bagh Chal.
 ---
 
