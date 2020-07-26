@@ -34,21 +34,22 @@ const PageTemplate = css`
     }
   }
 `;
-
+const page_name = "Contact";
+const page_desc = "Please feel free to leave any questions, feedback or  report typos, grammatical errors, or any other types of inaccuracies in the blog.Your help will prove invaluable to make this blog more reliable and accurate.";
 const Contact: React.FC = () => (
   <IndexLayout>
     <Helmet>
-      <title>Contact | SJB Blogs</title>
-      <meta name="description" content="Contact Page - Please feel free to leave any questions, feedback or  report typos, grammatical errors, or any other types of inaccuracies in the blog.Your help will prove invaluable to make this blog more reliable and accurate." />
-      <meta property="og:site_name" content="Contact - SJB Blogs" />
+      <title>{`${page_name} | ${config.title}`}</title>
+      <meta name="description" content={page_desc} />
+      <meta property="og:site_name" content={config.title} />
       <meta property="og:type" content="website" />
-      <meta property="og:title" content="Contact - SJB Blogs" />
-      <meta property="og:description" content="Contact Page - Please feel free to leave any questions, feedback or  report typos, grammatical errors, or any other types of inaccuracies in the blog.Your help will prove invaluable to make this blog more reliable and accurate." />
-      <meta property="og:url" content={config.siteUrl+'/contact'} />
+      <meta property="og:title" content={`${page_name} - ${config.title}`} />
+      <meta property="og:description" content={page_desc} />
+      <meta property="og:url" content={config.siteUrl+'/'+page_name.toLowerCase()} />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Contact - SJB Blogs" />
-      <meta name="twitter:description" content="Contact Page - Please feel free to leave any questions, feedback or  report typos, grammatical errors, or any other types of inaccuracies in the blog.Your help will prove invaluable to make this blog more reliable and accurate." />
-      <meta name="twitter:url" content={config.siteUrl+'/contact'} />
+      <meta name="twitter:title" content={`${page_name} - ${config.title}`} />
+      <meta name="twitter:description" content={page_desc} />
+      <meta name="twitter:url" content={config.siteUrl+'/'+page_name.toLowerCase()} />
     </Helmet>
     <Wrapper css={PageTemplate}>
       <header className="site-archive-header no-image" css={[SiteHeader, SiteArchiveHeader]}>
