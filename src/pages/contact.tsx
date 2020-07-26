@@ -8,6 +8,7 @@ import SiteNav from '../components/header/SiteNav';
 import { PostFullContent } from '../components/PostContent';
 import { Wrapper } from '../components/Wrapper';
 import IndexLayout from '../layouts';
+import config from '../website-config';
 import {
   inner,
   outer,
@@ -34,10 +35,20 @@ const PageTemplate = css`
   }
 `;
 
-const About: React.FC = () => (
+const Contact: React.FC = () => (
   <IndexLayout>
     <Helmet>
       <title>Contact | SJB Blogs</title>
+      <meta name="description" content="Contact Page - Please feel free to leave any questions, feedback or  report typos, grammatical errors, or any other types of inaccuracies in the blog.Your help will prove invaluable to make this blog more reliable and accurate." />
+      <meta property="og:site_name" content="Contact - SJB Blogs" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Contact - SJB Blogs" />
+      <meta property="og:description" content="Contact Page - Please feel free to leave any questions, feedback or  report typos, grammatical errors, or any other types of inaccuracies in the blog.Your help will prove invaluable to make this blog more reliable and accurate." />
+      <meta property="og:url" content={config.siteUrl+'/contact'} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Contact - SJB Blogs" />
+      <meta name="twitter:description" content="Contact Page - Please feel free to leave any questions, feedback or  report typos, grammatical errors, or any other types of inaccuracies in the blog.Your help will prove invaluable to make this blog more reliable and accurate." />
+      <meta name="twitter:url" content={config.siteUrl+'/contact'} />
     </Helmet>
     <Wrapper css={PageTemplate}>
       <header className="site-archive-header no-image" css={[SiteHeader, SiteArchiveHeader]}>
@@ -72,4 +83,4 @@ const About: React.FC = () => (
   </IndexLayout>
 );
 
-export default About;
+export default Contact;

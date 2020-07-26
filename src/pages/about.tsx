@@ -8,6 +8,7 @@ import SiteNav from '../components/header/SiteNav';
 import { PostFullContent } from '../components/PostContent';
 import { Wrapper } from '../components/Wrapper';
 import IndexLayout from '../layouts';
+import config from '../website-config';
 import {
   inner,
   outer,
@@ -38,6 +39,16 @@ const About: React.FC = () => (
   <IndexLayout>
     <Helmet>
       <title>About | SJB Blogs</title>
+      <meta name="description" content="A Personal Blogging Site. Hey! I am Soyuj Jung Basnet. I'm fascinated by Mathematics, Computer Science, and Physics. I want to explore how and why things work the way they do. This website was created to help me do exactly that. By penning down my thoughts, experiences, and point of view on various technical and non-technical areas, I wish to understand things better, explain them clearly, and ultimately be a better problem solver." />
+      <meta property="og:site_name" content="About - SJB Blogs" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="About - SJB Blogs" />
+      <meta property="og:description" content="A Personal Blogging Site. Hey! I am Soyuj Jung Basnet. I'm fascinated by Mathematics, Computer Science, and Physics. I want to explore how and why things work the way they do. This website was created to help me do exactly that. By penning down my thoughts, experiences, and point of view on various technical and non-technical areas, I wish to understand things better, explain them clearly, and ultimately be a better problem solver." />
+      <meta property="og:url" content={config.siteUrl+'/about'} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="About - SJB Blogs" />
+      <meta name="twitter:description" content="A Personal Blogging Site. Hey! I am Soyuj Jung Basnet. I'm fascinated by Mathematics, Computer Science, and Physics. I want to explore how and why things work the way they do. This website was created to help me do exactly that. By penning down my thoughts, experiences, and point of view on various technical and non-technical areas, I wish to understand things better, explain them clearly, and ultimately be a better problem solver." />
+      <meta name="twitter:url" content={config.siteUrl+'/about'} />
     </Helmet>
     <Wrapper css={PageTemplate}>
       <header className="site-archive-header no-image" css={[SiteHeader, SiteArchiveHeader]}>
