@@ -12,6 +12,8 @@ import styled from '@emotion/styled';
 import { Footer } from '../components/Footer';
 import SiteNav, { SiteNavMain } from '../components/header/SiteNav';
 import PostContent from '../components/PostContent';
+import ShareSocialLink from '../components/ShareSocialLink';
+
 import { ReadNext } from '../components/ReadNext';
 import { Subscribe } from '../components/subscribe/Subscribe';
 import { Wrapper } from '../components/Wrapper';
@@ -24,6 +26,8 @@ import { AuthorList } from '../components/AuthorList';
 export interface Author {
   id: string;
   bio: string;
+  twitter: string;
+  linkedin: string;
   avatar: {
     children: Array<{
       fluid: FluidObject;
@@ -220,6 +224,9 @@ const PageTemplate: React.FC<PageTemplateProps> = props => {
                         </span>
                       </div>
                     </section>
+                  </section>
+                  <section>
+                  <ShareSocialLink props={props}/>
                   </section>
                 </PostFullByline>
               </PostFullHeader>
@@ -474,6 +481,8 @@ export const query = graphql`
         }
         author {
           id
+          twitter
+          linkedin
           bio
           avatar {
             children {
