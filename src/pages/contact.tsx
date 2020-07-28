@@ -43,11 +43,11 @@ const Contact: React.FC = () => (
       <meta name="description" content={page_desc} />
       <meta property="og:site_name" content={config.title} />
       <meta property="og:type" content="website" />
-      <meta property="og:title" content={`${page_name} - ${config.title}`} />
+      <meta property="og:title" content={`${page_name} | ${config.title}`} />
       <meta property="og:description" content={page_desc} />
       <meta property="og:url" content={config.siteUrl+'/'+page_name.toLowerCase()} />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={`${page_name} - ${config.title}`} />
+      <meta name="twitter:title" content={`${page_name} | ${config.title}`} />
       <meta name="twitter:description" content={page_desc} />
       <meta name="twitter:url" content={config.siteUrl+'/'+page_name.toLowerCase()} />
     </Helmet>

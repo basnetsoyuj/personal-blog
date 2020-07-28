@@ -48,6 +48,7 @@ export const ShareSocialLink: React.FC<ShareSocialLinkProps> = ({ props }) => {
             <LinkLabel>Share on LinkedIn</LinkLabel>
           </ShareLink>
         </ShareItem>
+        <div style={{ clear: "both" }}></div>
       </ShareSocial>
     </Share>
   );

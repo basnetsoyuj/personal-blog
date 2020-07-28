@@ -59,6 +59,7 @@ interface TagTemplateProps {
 
 const Tags: React.FC<TagTemplateProps> = props => {
   const tag = props.pageContext.tag ? props.pageContext.tag : '';
+  const tagName = 'Posts Tagged: ' + tag;
   const { edges, totalCount } = props.data.allMarkdownRemark;
   const tagData = props.data.allTagYaml.edges.find(
     n => n.node.id.toLowerCase() === tag.toLowerCase(),
@@ -69,16 +70,16 @@ const Tags: React.FC<TagTemplateProps> = props => {
       <Helmet>
         <html lang={config.lang} />
         <title>
-          {tag} - {config.title}
+          {tagName} | {config.title}
         </title>
         <meta name="description" content={tagData?.node ? tagData.node.description : ''} />
         <meta property="og:site_name" content={config.title} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content={`${tag} - ${config.title}`} />
+        <meta property="og:title" content={`${tagName} | ${config.title}`} />
         <meta property="og:url" content={`${config.siteUrl}/tags/${_.kebabCase(props.pageContext.tag)}/`} />
         {config.facebook && <meta property="article:publisher" content={config.facebook} />}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`${tag} - ${config.title}`} />
+        <meta name="twitter:title" content={`${tagName} | ${config.title}`} />
         <meta name="twitter:url" content={`${config.siteUrl}/tags/${_.kebabCase(props.pageContext.tag)}/`} />
         {config.twitter && (
           <meta
@@ -103,17 +104,18 @@ const Tags: React.FC<TagTemplateProps> = props => {
             className="site-header-background"
           >
             <SiteHeaderContent css={inner} className="site-header-content">
-              <SiteTitle className="site-title">{tag}</SiteTitle>
+              <SiteTitle className="site-title">#{_.kebabCase(tag)}</SiteTitle>
               <SiteDescription className="site-description">
                 {tagData?.node.description ? (
-                  tagData.node.description
-                ) : (
                   <>
-                    A collection of {totalCount > 1 && `${totalCount} posts`}
-                    {totalCount === 1 && '1 post'}
-                    {totalCount === 0 && 'No posts'}
+                    {tagData.node.description}
                   </>
-                )}
+                ) : (<></>)}
+              </SiteDescription>
+              <SiteDescription className="site-description">
+                A collection of {totalCount > 1 && `${totalCount} posts`}
+                {totalCount === 1 && '1 post'}
+                {totalCount === 0 && 'No posts'}
               </SiteDescription>
             </SiteHeaderContent>
           </ResponsiveHeaderBackground>
