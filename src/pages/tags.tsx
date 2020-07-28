@@ -93,7 +93,7 @@ const Tags: React.FC<TagTemplateProps> = (props) => {
 
             <PostFullContent className="post-full-content">
               <div className="post-content">
-                {Object.keys(counter).map(n=>{
+                {Object.keys(counter).sort().map(n=>{
                   return (<div css={tagCss}><div className="tag">
                     <Link to={`/tags/${_.kebabCase(n)}`}>
                       <span className="tagName">&nbsp;{n}&nbsp;</span>
