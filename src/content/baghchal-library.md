@@ -2,7 +2,7 @@
 layout: post
 title: 'baghchal v1.0.1 Release'
 author: [Soyuj Jung Basnet]
-tags: ['board game','engineering','python','baghchal']
+tags: ['board game','engineering','python']
 image: img/baghchal.jpg
 date: '2019-06-27T11:46:37.121Z'
 draft: false

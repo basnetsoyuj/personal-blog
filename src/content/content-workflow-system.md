@@ -2,7 +2,7 @@
 layout: post
 title: 'Developing The Content Workflow System for Programiz'
 author: [Soyuj Jung Basnet]
-tags: ['engineering', 'work']
+tags: ['engineering']
 image: img/content-writing.png
 date: '2020-07-22T23:46:37.121Z'
 draft: false
