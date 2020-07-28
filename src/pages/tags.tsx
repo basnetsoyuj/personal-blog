@@ -94,8 +94,11 @@ const Tags: React.FC<TagTemplateProps> = (props) => {
             <PostFullContent className="post-full-content">
               <div className="post-content">
                 {Object.keys(counter).map(n=>{
-                  return (<div css={tagCss}><div className="tag"><Link to={`/tags/${_.kebabCase(n)}`}><span className="tagName">{n}</span>
-                  <span className="number-of-post">&nbsp;{counter[n]}&nbsp;</span></Link></div><div className="clearFix"></div></div>);
+                  return (<div css={tagCss}><div className="tag">
+                    <Link to={`/tags/${_.kebabCase(n)}`}>
+                      <span className="tagName">&nbsp;{n}&nbsp;</span>
+                      <span className="number-of-post">&nbsp;{counter[n]}&nbsp;</span>
+                    </Link></div><div className="clearFix"></div></div>);
                 })}
                 <div className="clearFix"></div>
               </div>
@@ -114,21 +117,21 @@ export const tagCss = css`
   display: inline;
   font-weight: 500;
   .tag{
-    margin: 1.5rem;
+    margin: 1.3rem;
     letter-spacing: 2px;
     a, a:hover{
-      box-shadow: none;
       background-color: #eee;
-    }
-    span{
-      padding:0 5px;
+      box-shadow: none;
     }
     .tagName{
+      padding: 2px;
       background-color: #e3e3e3;
-      border-right: 1px solid #333;
+      border-right: 0.75px solid #333;
     }
     .number-of-post{
-      border-left: 1px solid #333;
+      background-color: #eee;
+      padding: 2px;
+      border-left: 0.75px solid #333;
     }
 }
 
