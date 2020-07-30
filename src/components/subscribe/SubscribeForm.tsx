@@ -18,7 +18,7 @@ export const SubscribeForm: React.FC = () => {
       name="mc-embedded-subscribe-form"
       className="subscribe-form"
       target="_blank"
-    >
+      >
       {/* This is required for the form to work correctly  */}
       <FormGroup className="form-group">
         <SubscribeEmail
@@ -30,7 +30,8 @@ export const SubscribeForm: React.FC = () => {
         />
       </FormGroup>
       <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden="true">
-        <input type="text" name={config.mailchimpName} tabIndex={-1} />
+        <input type="hidden" value={config.mailchimpName} name="uri" tabIndex={-1} />
+        <input type="hidden" value="en_US" name="loc" />
       </div>
       <SubscribeFormButton type="submit">
         <span>Subscribe</span>
