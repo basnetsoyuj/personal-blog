@@ -1,10 +1,16 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
 
+function filterHTML(str, url) {
+  let noIframe = str.replace(/<iframe.*?<\/iframe>/g, '');
+  return noIframe.replace(/src="(\/.*?)"/g, `src="${url}$1"`);
+}
+
 module.exports = {
   siteMetadata: {
     title: 'Soyuj Jung Basnet Blogs',
-    description: 'A personal blogging website for Soyuj Jung Basnet to put down his thoughts, musings and experiences.',
+    description:
+      'A personal blogging website for Soyuj Jung Basnet to put down his thoughts, musings and experiences.',
     siteUrl: 'https://blog.basnetsoyuj.com.np', // full path to blog - no ending slash
   },
   mapping: {
@@ -86,9 +92,11 @@ module.exports = {
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ "content:encoded": edge.node.html }],
-                })
-              })
+                  custom_elements: [
+                    { 'content:encoded': filterHTML(edge.node.html, site.siteMetadata.siteUrl) },
+                  ],
+                });
+              });
             },
             query: `
               {
@@ -109,15 +117,15 @@ module.exports = {
                 }
               }
             `,
-            output: "/rss.xml",
-            title: "Your Site's RSS Feed",
+            output: '/rss.xml',
+            title: `Soyuj Jung Basnet Blogs' RSS Feed`,
             // optional configuration to insert feed reference in pages:
             // if `string` is used, it will be used to create RegExp and then test if pathname of
             // current page satisfied this regular expression;
             // if not provided or `undefined`, all pages will have feed reference inserted
-            match: "^/blog/",
+            match: '^/blog/',
             // optional configuration to specify external rss feed, such as feedburner
-            link: "https://feeds.feedburner.com/gatsby/blog",
+            link: 'https://feeds.feedburner.com/sjbblogs',
           },
         ],
       },
